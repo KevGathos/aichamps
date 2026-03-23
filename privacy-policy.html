@@ -1,146 +1,382 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI Champs — Privacy Policy</title>
-<style>
-  body { font-family: Arial, sans-serif; max-width: 800px;
-         margin: 40px auto; padding: 0 20px; color: #222;
-         line-height: 1.7; }
-  h1 { color: #00BCD4; }
-  h2 { color: #2D1B69; border-bottom: 2px solid #EDE9FF;
-       padding-bottom: 6px; margin-top: 32px; }
-  .header { background: #0A0E1A; color: white;
-            padding: 24px; border-radius: 8px;
-            margin-bottom: 32px; }
-  .header h1 { color: #00BCD4; margin: 0 0 4px; }
-  .header p { color: #aaa; margin: 0; font-size: 14px; }
-  .badge { background: #EDE9FF; color: #5B3CE0;
-           padding: 4px 12px; border-radius: 20px;
-           font-size: 13px; display: inline-block;
-           margin-bottom: 16px; }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Champs — Privacy Policy</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #0A0E1A;
+      color: #FFFFFF;
+      line-height: 1.7;
+      padding: 0;
+    }
+    .header {
+      background: #0D1B2A;
+      border-bottom: 2px solid #00BCD4;
+      padding: 40px 24px;
+      text-align: center;
+    }
+    .header .brand {
+      font-size: 32px;
+      font-weight: 700;
+      color: #00BCD4;
+      letter-spacing: 3px;
+      margin-bottom: 8px;
+    }
+    .header .subtitle {
+      font-size: 14px;
+      color: #7A8BA0;
+      letter-spacing: 1px;
+      margin-bottom: 4px;
+    }
+    .header .tagline {
+      font-size: 13px;
+      color: #FFC107;
+      font-style: italic;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+    .effective {
+      background: #0D1B2A;
+      border: 1px solid #1A3A5C;
+      border-left: 4px solid #00BCD4;
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin-bottom: 40px;
+      font-size: 14px;
+      color: #7A8BA0;
+    }
+    .effective strong { color: #00BCD4; }
+    h2 {
+      font-size: 18px;
+      font-weight: 700;
+      color: #00BCD4;
+      margin: 40px 0 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #1A3A5C;
+      letter-spacing: 0.5px;
+    }
+    h2 .num {
+      color: #FFC107;
+      margin-right: 8px;
+    }
+    p {
+      font-size: 15px;
+      color: #CCCCCC;
+      margin-bottom: 12px;
+    }
+    ul {
+      list-style: none;
+      margin: 8px 0 16px;
+      padding: 0;
+    }
+    ul li {
+      font-size: 15px;
+      color: #CCCCCC;
+      padding: 6px 0 6px 24px;
+      position: relative;
+      border-bottom: 1px solid #0D1B2A;
+    }
+    ul li:last-child { border-bottom: none; }
+    ul li::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: #00BCD4;
+      font-size: 12px;
+      top: 8px;
+    }
+    ul li strong { color: #FFFFFF; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+      font-size: 14px;
+    }
+    table th {
+      background: #0D1B2A;
+      color: #00BCD4;
+      padding: 12px 16px;
+      text-align: left;
+      font-weight: 600;
+      border: 1px solid #1A3A5C;
+    }
+    table td {
+      padding: 12px 16px;
+      color: #CCCCCC;
+      border: 1px solid #1A3A5C;
+      vertical-align: top;
+    }
+    table tr:nth-child(even) td { background: #0D1B2A; }
+    .highlight-box {
+      background: #0D1B2A;
+      border: 1px solid #1A3A5C;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 16px 0;
+    }
+    .highlight-box.green { border-left: 4px solid #00C853; }
+    .highlight-box.teal { border-left: 4px solid #00BCD4; }
+    .highlight-box.gold { border-left: 4px solid #FFC107; }
+    .highlight-box p { margin-bottom: 0; }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin: 16px 0;
+    }
+    .contact-item {
+      background: #0D1B2A;
+      border: 1px solid #1A3A5C;
+      border-radius: 8px;
+      padding: 16px;
+    }
+    .contact-item .label {
+      font-size: 11px;
+      color: #7A8BA0;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 4px;
+    }
+    .contact-item .value {
+      font-size: 14px;
+      color: #00BCD4;
+      word-break: break-all;
+    }
+    a { color: #00BCD4; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .footer {
+      background: #0D1B2A;
+      border-top: 1px solid #1A3A5C;
+      text-align: center;
+      padding: 32px 24px;
+      margin-top: 60px;
+    }
+    .footer p {
+      font-size: 13px;
+      color: #7A8BA0;
+      margin-bottom: 4px;
+    }
+    .footer .brand-small {
+      color: #00BCD4;
+      font-weight: 600;
+    }
+    @media (max-width: 600px) {
+      .header .brand { font-size: 24px; }
+      .contact-grid { grid-template-columns: 1fr; }
+      h2 { font-size: 16px; }
+    }
+  </style>
 </head>
 <body>
 
-<div class="header">
-  <h1>AI CHAMPS</h1>
-  <p>Artificial Intelligence Championship — Privacy Policy</p>
-  <p>Geoinfortrak International Limited</p>
-</div>
+  <div class="header">
+    <div class="brand">{ AI CHAMPS }</div>
+    <div class="subtitle">ARTIFICIAL INTELLIGENCE CHAMPIONSHIP</div>
+    <div class="tagline">Learn It &middot; Master It &middot; Win It</div>
+  </div>
 
-<span class="badge">Effective: 1 April 2026</span>
+  <div class="container">
 
-<h2>1. Who We Are</h2>
-<p>AI Champs is operated by <strong>Geoinfortrak International
-Limited</strong>, a technology company incorporated in Kenya.
-<br>Email: geoinfortrak@gmail.com
-<br>Phone: +254 720 357 781
-<br>Location: Nairobi, Kenya</p>
+    <div style="text-align:center; margin: 32px 0 8px;">
+      <h1 style="font-size:24px; font-weight:700; color:#FFFFFF;">Privacy Policy</h1>
+    </div>
 
-<h2>2. What Information We Collect</h2>
-<ul>
-<li><strong>Account information:</strong> Display name,
-phone number or email (used as login), and age range</li>
-<li><strong>Parent/Guardian information:</strong> Phone number
-of parent or guardian (required for users under 18)</li>
-<li><strong>Payment information:</strong> Google Play transaction
-reference numbers. We do NOT store card numbers, M-Pesa PINs,
-or full payment credentials</li>
-<li><strong>Learning progress:</strong> Level completion data,
-quiz scores, achievement badges, and XP points</li>
-<li><strong>Championship data:</strong> Competition entries,
-rankings, and scholarship award history</li>
-<li><strong>Payout information:</strong> M-Pesa number provided
-by winners at time of award — collected only when a user wins</li>
-<li><strong>Device information:</strong> Device model, OS version,
-and app version (for technical support only)</li>
-</ul>
+    <div class="effective">
+      <strong>Effective Date:</strong> 23 March 2026 &nbsp;&nbsp;|&nbsp;&nbsp;
+      <strong>Last Updated:</strong> 23 March 2026 &nbsp;&nbsp;|&nbsp;&nbsp;
+      <strong>Operator:</strong> Geoinfortrak International Limited
+    </div>
 
-<h2>3. How We Use Your Information</h2>
-<ul>
-<li>To provide access to the AI Champs learning curriculum
-and track your progress</li>
-<li>To administer monthly scholarship championships and
-distribute awards via M-Pesa to winners</li>
-<li>To send important account notifications (password resets,
-payment confirmations, championship results)</li>
-<li>To improve the app based on anonymised usage patterns</li>
-<li>To comply with our legal obligations under the Kenya
-Data Protection Act 2019</li>
-</ul>
+    <!-- SECTION 1 -->
+    <h2><span class="num">1.</span> Who We Are</h2>
+    <p>AI Champs is operated by Geoinfortrak International Limited, a technology company incorporated in Kenya. We build AI and mathematics learning tools for African learners.</p>
+    <div class="contact-grid">
+      <div class="contact-item">
+        <div class="label">Email</div>
+        <div class="value"><a href="mailto:geoinfortrak@gmail.com">geoinfortrak@gmail.com</a></div>
+      </div>
+      <div class="contact-item">
+        <div class="label">Phone</div>
+        <div class="value">+254 720 357 781</div>
+      </div>
+      <div class="contact-item">
+        <div class="label">WhatsApp</div>
+        <div class="value"><a href="https://wa.me/254720357781">wa.me/254720357781</a></div>
+      </div>
+      <div class="contact-item">
+        <div class="label">Location</div>
+        <div class="value">Nairobi, Kenya</div>
+      </div>
+    </div>
 
-<h2>4. Children's Privacy (Under 13)</h2>
-<p>AI Champs is designed for learners aged 10 and above.
-For users under 13 years of age:</p>
-<ul>
-<li>A parent or guardian must provide consent before
-account creation</li>
-<li>We collect only the minimum data necessary</li>
-<li>We do not serve behavioural advertising to users under 13</li>
-<li>We do not share children's personal data with third
-parties for marketing purposes</li>
-<li>Parents may request deletion of their child's account
-by contacting geoinfortrak@gmail.com</li>
-</ul>
+    <!-- SECTION 2 -->
+    <h2><span class="num">2.</span> What Information We Collect</h2>
+    <ul>
+      <li><strong>Account information:</strong> Display name, phone number or email address used as login, and age</li>
+      <li><strong>Parent or guardian information:</strong> Phone number of parent or guardian, required for all users under 18 years of age</li>
+      <li><strong>Payment information:</strong> Google Play transaction reference numbers only. We do NOT store card numbers, M-Pesa PINs, or full payment credentials</li>
+      <li><strong>Learning progress:</strong> Level completion data, quiz scores, achievement badges, and XP points</li>
+      <li><strong>Championship data:</strong> Competition entries, leaderboard rankings, and scholarship award history</li>
+      <li><strong>Payout information:</strong> M-Pesa number provided by winners at time of award — collected only when a user wins a scholarship</li>
+      <li><strong>Device information:</strong> Device model, operating system version, and app version — used for technical support only</li>
+    </ul>
 
-<h2>5. How We Share Your Information</h2>
-<p>We do <strong>NOT</strong> sell your personal information.
-We share data only with:</p>
-<ul>
-<li><strong>Supabase</strong> — database and authentication
-provider for storing account and progress data</li>
-<li><strong>Google Play</strong> — for app distribution and
-in-app payment processing</li>
-<li><strong>Safaricom M-Pesa / Daraja API</strong> — for
-processing scholarship award payments to winners</li>
-<li><strong>Twilio</strong> — for sending SMS verification
-codes during phone signup</li>
-<li><strong>Legal authorities</strong> — only when required
-by law in Kenya</li>
-</ul>
+    <!-- SECTION 3 -->
+    <h2><span class="num">3.</span> How We Use Your Information</h2>
+    <ul>
+      <li>To provide access to the AI Champs learning curriculum and track your learning progress</li>
+      <li>To administer monthly AI Scholarship Championships and distribute scholarship awards via M-Pesa to winners</li>
+      <li>To send important account notifications including password resets, payment confirmations, and championship results</li>
+      <li>To improve the app based on anonymised usage patterns</li>
+      <li>To enforce age-appropriate access and parental consent requirements</li>
+      <li>To comply with our legal obligations under the Kenya Data Protection Act 2019</li>
+    </ul>
 
-<h2>6. Data Storage and Security</h2>
-<ul>
-<li>Your data is stored securely on Supabase servers with
-HTTPS encryption on all transfers</li>
-<li>We use Row Level Security (RLS) so users can only access
-their own data</li>
-<li>Payment transactions are processed through Google Play's
-secure billing platform</li>
-<li>We retain your data for as long as your account is active,
-or as required by Kenyan law</li>
-</ul>
+    <!-- SECTION 4 -->
+    <h2><span class="num">4.</span> Children and Parental Consent</h2>
+    <p>AI Champs is designed for learners aged 10 and above. Users under the age of 10 are blocked from creating an account.</p>
+    <div class="highlight-box gold">
+      <p>For all users under 18 years of age, a parent or guardian must provide consent before the learner can access any learning material.</p>
+    </div>
+    <ul>
+      <li>A parent or guardian phone number is collected and recorded during account setup for users under 18</li>
+      <li>We collect only the minimum data necessary for the service</li>
+      <li>We do not serve behavioural or targeted advertising to users under 18</li>
+      <li>We do not share personal data of users under 18 with third parties for marketing purposes</li>
+      <li>Parents and guardians may request deletion of their child's account at any time by contacting <a href="mailto:geoinfortrak@gmail.com">geoinfortrak@gmail.com</a></li>
+    </ul>
 
-<h2>7. Your Rights (Kenya Data Protection Act 2019)</h2>
-<ul>
-<li><strong>Right to access:</strong> Request a copy of all
-data we hold about you</li>
-<li><strong>Right to correction:</strong> Request correction
-of inaccurate personal data</li>
-<li><strong>Right to deletion:</strong> Request deletion of
-your account and associated data</li>
-<li><strong>Right to object:</strong> Object to processing
-of your data for specific purposes</li>
-</ul>
-<p>To exercise these rights: <strong>geoinfortrak@gmail.com</strong></p>
+    <!-- SECTION 5 -->
+    <h2><span class="num">5.</span> How We Share Your Information</h2>
+    <div class="highlight-box green">
+      <p>We do <strong>NOT</strong> sell your personal information to anyone, ever.</p>
+    </div>
+    <p>We share data only with the following service providers, strictly for the purpose of operating AI Champs:</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Service Provider</th>
+          <th>Purpose</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Supabase</strong></td>
+          <td>Database and authentication — stores account and learning progress data securely</td>
+        </tr>
+        <tr>
+          <td><strong>Google Play</strong></td>
+          <td>App distribution and in-app payment processing</td>
+        </tr>
+        <tr>
+          <td><strong>Safaricom M-Pesa / Daraja API</strong></td>
+          <td>Processing scholarship award payments to winners</td>
+        </tr>
+        <tr>
+          <td><strong>Twilio</strong></td>
+          <td>Sending SMS verification codes during phone number signup</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>We may also disclose data to legal authorities in Kenya when required by law. Our data safety practices are also disclosed in the Google Play Data Safety section of our app listing.</p>
 
-<h2>8. Changes to This Policy</h2>
-<p>We may update this privacy policy from time to time.
-We will notify users of significant changes via the app.
-Continued use of AI Champs after changes constitutes
-acceptance of the updated policy.</p>
-<p><em>Last updated: 1 April 2026</em></p>
+    <!-- SECTION 6 -->
+    <h2><span class="num">6.</span> Data Storage and Security</h2>
+    <ul>
+      <li>All data is stored securely on Supabase servers with HTTPS encryption on all data transfers</li>
+      <li>We use Row Level Security (RLS) so that each user can only access their own data</li>
+      <li>Payment transactions are processed entirely through Google Play's secure billing platform — we never handle raw payment credentials</li>
+      <li>Scholarship payout M-Pesa numbers are collected only at the time of award and used only for that single transaction</li>
+      <li>We retain your data for as long as your account is active, or as required by Kenyan law</li>
+      <li>In the event of a data breach, we will notify affected users and relevant authorities as required by the Kenya Data Protection Act 2019</li>
+    </ul>
 
-<h2>9. Contact Us</h2>
-<p>
-<strong>Geoinfortrak International Limited</strong><br>
-Email: geoinfortrak@gmail.com<br>
-Phone: +254 720 357 781<br>
-WhatsApp: wa.me/254720357781<br>
-Location: Nairobi, Kenya
-</p>
+    <!-- SECTION 7 -->
+    <h2><span class="num">7.</span> Your Rights</h2>
+    <p>Under the Kenya Data Protection Act 2019, you have the following rights:</p>
+    <ul>
+      <li><strong>Right to access:</strong> Request a copy of all personal data we hold about you</li>
+      <li><strong>Right to correction:</strong> Request correction of any inaccurate or incomplete personal data</li>
+      <li><strong>Right to deletion:</strong> Request deletion of your account and all associated personal data</li>
+      <li><strong>Right to object:</strong> Object to the processing of your data for specific purposes</li>
+      <li><strong>Right to portability:</strong> Request your data in a portable format</li>
+    </ul>
+    <p>To exercise any of these rights, contact us at <a href="mailto:geoinfortrak@gmail.com">geoinfortrak@gmail.com</a>. We will respond within 21 days.</p>
+
+    <!-- SECTION 8 -->
+    <h2><span class="num">8.</span> Account Deletion</h2>
+    <div class="highlight-box teal">
+      <p>You may delete your account at any time. All your personal data will be permanently removed from our systems within 30 days of your request.</p>
+    </div>
+    <p>To delete your account, use any of these methods:</p>
+    <ul>
+      <li><strong>In the app:</strong> Go to Profile tab → Settings → Delete Account</li>
+      <li><strong>By email:</strong> Send a deletion request to <a href="mailto:geoinfortrak@gmail.com">geoinfortrak@gmail.com</a> with the subject line "Account Deletion Request"</li>
+      <li><strong>Online:</strong> <a href="https://kevgathos.github.io/aichamps/privacy-policy.html">kevgathos.github.io/aichamps/privacy-policy.html</a></li>
+    </ul>
+    <p>Upon deletion, all personal data including display name, phone number, email address, learning progress, championship history, and payout information will be permanently deleted.</p>
+
+    <!-- SECTION 9 -->
+    <h2><span class="num">9.</span> In-App Purchases and Payments</h2>
+    <ul>
+      <li>All in-app purchases are processed securely through Google Play Billing</li>
+      <li>Platform unlocks (KES 350 each) are one-time purchases — no subscriptions, no recurring charges, no expiry</li>
+      <li>Scholarship championship entry is always free — no payment is required to compete</li>
+      <li>Scholarship awards are paid via Safaricom M-Pesa to verified winners only</li>
+      <li>Refund requests for in-app purchases should be submitted directly through Google Play</li>
+    </ul>
+
+    <!-- SECTION 10 -->
+    <h2><span class="num">10.</span> Cookies and Advertising</h2>
+    <ul>
+      <li>AI Champs does not use cookies</li>
+      <li>The app does not track your activity across other apps or websites</li>
+      <li>The app does not display advertisements of any kind</li>
+      <li>We do not use your data for targeted advertising</li>
+    </ul>
+
+    <!-- SECTION 11 -->
+    <h2><span class="num">11.</span> Changes to This Policy</h2>
+    <p>We may update this privacy policy from time to time to reflect changes in our practices or legal requirements. We will notify users of significant changes via an in-app notification. The effective date at the top of this page will always reflect when the policy was last updated.</p>
+    <p>Continued use of AI Champs after changes are posted constitutes your acceptance of the updated policy.</p>
+
+    <!-- SECTION 12 -->
+    <h2><span class="num">12.</span> Contact Us</h2>
+    <p>For any questions, concerns, or requests related to this privacy policy:</p>
+    <div class="contact-grid">
+      <div class="contact-item">
+        <div class="label">Company</div>
+        <div class="value" style="color:#FFFFFF;">Geoinfortrak International Limited</div>
+      </div>
+      <div class="contact-item">
+        <div class="label">Email</div>
+        <div class="value"><a href="mailto:geoinfortrak@gmail.com">geoinfortrak@gmail.com</a></div>
+      </div>
+      <div class="contact-item">
+        <div class="label">Phone</div>
+        <div class="value">+254 720 357 781</div>
+      </div>
+      <div class="contact-item">
+        <div class="label">WhatsApp</div>
+        <div class="value"><a href="https://wa.me/254720357781">wa.me/254720357781</a></div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    <p class="brand-small">{ AI CHAMPS }</p>
+    <p>Geoinfortrak International Limited &nbsp;&middot;&nbsp; Nairobi, Kenya</p>
+    <p>Last updated: 23 March 2026</p>
+    <p style="margin-top:12px; color:#1A3A5C;">Learn It &middot; Master It &middot; Win It</p>
+  </div>
 
 </body>
 </html>
