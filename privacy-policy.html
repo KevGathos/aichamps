@@ -143,7 +143,7 @@
 
     <div class="effective">
       <strong>Effective Date:</strong> 26 March 2026 &nbsp;&nbsp;|&nbsp;&nbsp;
-      <strong>Last Updated:</strong> 26 March 2026 &nbsp;&nbsp;|&nbsp;&nbsp;
+      <strong>Last Updated:</strong> 28 March 2026 &nbsp;&nbsp;|&nbsp;&nbsp;
       <strong>Operator:</strong> Geoinfortrak International Limited
     </div>
 
@@ -161,11 +161,14 @@
     <h2><span class="num">2.</span> What Information We Collect</h2>
     <h3>2.1 Account Information</h3>
     <ul>
-      <li><strong>Phone number</strong> — if you sign up via phone OTP</li>
-      <li><strong>Email address</strong> — if you sign up via email or Google Sign-In</li>
+      <li><strong>Email address</strong> — used for email OTP sign-in (6-digit code sent to your email)</li>
+      <li><strong>Google account</strong> — if you sign in via Google Sign-In</li>
       <li><strong>Display name</strong> — the name you choose to show on leaderboards</li>
       <li><strong>Age</strong> — to ensure age-appropriate access (minimum age: 10)</li>
+      <li><strong>Phone number</strong> — optional, collected for scholarship M-Pesa payouts only. No SMS is sent.</li>
       <li><strong>Parent or guardian phone number</strong> — required for all users under 18 years of age</li>
+      <li><strong>Country of residence</strong> — used to display amounts in your local currency</li>
+      <li><strong>Referral code</strong> — if you were referred by another user or wish to refer others</li>
     </ul>
     <h3>2.2 Learning Data</h3>
     <ul>
@@ -178,7 +181,7 @@
     <h3>2.3 Payment Data</h3>
     <ul>
       <li>Google Play transaction reference numbers only</li>
-      <li>Platform unlock records and donation records</li>
+      <li>Platform unlock records and community sponsorship donation records</li>
       <li>M-Pesa payout number — collected only from scholarship winners at the time of payout</li>
     </ul>
     <p>We do <strong>not</strong> collect or store credit card numbers, bank account details, M-Pesa PINs, or Google Pay credentials. All payments are processed securely through Google Play Billing.</p>
@@ -193,9 +196,11 @@
     <ul>
       <li>To provide access to the AI Champs learning curriculum and track your learning progress</li>
       <li>To administer monthly AI Scholarship Championships and distribute scholarship awards via M-Pesa to winners</li>
-      <li>To authenticate your account and keep it secure</li>
-      <li>To send important notifications including password resets, payment confirmations, and championship results</li>
+      <li>To authenticate your account securely via email OTP or Google Sign-In</li>
+      <li>To send important notifications including OTP codes, payment confirmations, and championship results</li>
       <li>To display your display name and score publicly on the in-app leaderboard</li>
+      <li>To display amounts in your local currency based on your country of residence</li>
+      <li>To track referral activity and credit referral earnings to your account</li>
       <li>To improve the app based on anonymised usage patterns</li>
       <li>To enforce age-appropriate access and parental consent requirements</li>
       <li>To comply with our legal obligations under the Kenya Data Protection Act 2019</li>
@@ -226,14 +231,24 @@
       <tbody>
         <tr><td><strong>Supabase</strong></td><td>Database and authentication — stores account and learning progress data securely. <a href="https://supabase.com/privacy">Privacy Policy</a></td></tr>
         <tr><td><strong>Google Play Billing</strong></td><td>App distribution and in-app payment processing. <a href="https://policies.google.com/privacy">Privacy Policy</a></td></tr>
-        <tr><td><strong>Google Firebase</strong></td><td>Push notifications and analytics. <a href="https://firebase.google.com/support/privacy">Privacy Policy</a></td></tr>
-        <tr><td><strong>Twilio</strong></td><td>Sending SMS OTP verification codes during phone number signup. <a href="https://www.twilio.com/en-us/legal/privacy">Privacy Policy</a></td></tr>
+        <tr><td><strong>Google Firebase</strong></td><td>Push notifications. <a href="https://firebase.google.com/support/privacy">Privacy Policy</a></td></tr>
         <tr><td><strong>Safaricom M-Pesa / Daraja API</strong></td><td>Processing scholarship award payments to winners only. <a href="https://www.safaricom.co.ke/privacy-policy">Privacy Policy</a></td></tr>
       </tbody>
     </table>
     <p>We may also disclose data to legal authorities in Kenya when required by law.</p>
 
-    <h2><span class="num">6.</span> Data Storage and Security</h2>
+    <h2><span class="num">6.</span> Referral Programme</h2>
+    <p>AI Champs includes an optional referral programme that allows users to earn credit toward a free platform unlock by referring new users.</p>
+    <ul>
+      <li>Every user is assigned a unique 6-character referral code at signup</li>
+      <li>When a new user signs up using your referral code and unlocks a platform, you earn KES 10 referral credit</li>
+      <li>Referral credit accumulates in your account and can be redeemed for a free platform unlock once the threshold is reached</li>
+      <li>Referral activity is recorded in our database — who referred whom, and which platform was unlocked</li>
+      <li>Referral data is private — referred users do not see who referred them, and referrers do not see the full profile of those they referred</li>
+      <li>Referral credit has no cash value and cannot be withdrawn</li>
+    </ul>
+
+    <h2><span class="num">7.</span> Data Storage and Security</h2>
     <ul>
       <li>All data is stored securely on Supabase servers with HTTPS/TLS encryption on all data transfers</li>
       <li>We use Row Level Security (RLS) so that each user can only access their own data</li>
@@ -243,33 +258,34 @@
       <li>In the event of a data breach, we will notify affected users and relevant authorities as required by the Kenya Data Protection Act 2019</li>
     </ul>
 
-    <h2><span class="num">7.</span> Your Rights</h2>
+    <h2><span class="num">8.</span> Your Rights</h2>
     <p>Under the Kenya Data Protection Act 2019, you have the following rights:</p>
     <ul>
       <li><strong>Right to access:</strong> Your learning progress, scores, and profile information are visible within the app. You may also request a full copy by emailing <a href="mailto:geoinfortrak@gmail.com">geoinfortrak@gmail.com</a></li>
-      <li><strong>Right to correction:</strong> You can update your display name from within the app's profile screen. For other corrections, contact us by email</li>
-      <li><strong>Right to deletion:</strong> Request deletion of your account and all associated personal data (see Section 8)</li>
+      <li><strong>Right to correction:</strong> You can update your display name and other profile details from within the app's profile screen. For other corrections, contact us by email</li>
+      <li><strong>Right to deletion:</strong> Request deletion of your account and all associated personal data (see Section 9)</li>
       <li><strong>Right to object:</strong> Object to the processing of your data for specific purposes</li>
       <li><strong>Right to portability:</strong> Request your data in a portable format by emailing <a href="mailto:geoinfortrak@gmail.com">geoinfortrak@gmail.com</a></li>
     </ul>
     <p>To exercise any of these rights, contact us at <a href="mailto:geoinfortrak@gmail.com">geoinfortrak@gmail.com</a>. We will respond within 21 days.</p>
 
-    <h2><span class="num">8.</span> Account Deletion</h2>
+    <h2><span class="num">9.</span> Account Deletion</h2>
     <div class="highlight-box teal">
       <p>You may delete your account at any time from within the app. All personal data will be anonymised immediately upon deletion. Payment records are retained for 90 days as required by Kenyan financial regulations, then permanently deleted.</p>
     </div>
-    <h3>8.1 In-App Deletion</h3>
+    <h3>9.1 In-App Deletion</h3>
     <p>Open AI Champs &rarr; Profile tab &rarr; scroll to "Danger Zone" &rarr; tap "Delete My Account". Upon confirmation:</p>
     <ul>
       <li>Your display name, phone number, age, and personal details are <strong>anonymised immediately</strong></li>
       <li>Your account is marked as deleted and you are signed out</li>
+      <li>Referral earnings and referral history are permanently deleted</li>
       <li>Payment records are retained for <strong>90 days</strong> as required by Kenyan financial regulations, then permanently deleted</li>
       <li>You may contact <a href="mailto:geoinfortrak@gmail.com">geoinfortrak@gmail.com</a> within 30 days to recover your account</li>
     </ul>
-    <h3>8.2 Email Deletion Request</h3>
+    <h3>9.2 Email Deletion Request</h3>
     <p>If you cannot access the app, send an email to <a href="mailto:geoinfortrak@gmail.com">geoinfortrak@gmail.com</a> with the subject line <strong>"Delete My Account"</strong> and include the email or phone number associated with your account. We will process your request within 7 business days.</p>
 
-    <h2><span class="num">9.</span> Scholarship Awards and Financial Data</h2>
+    <h2><span class="num">10.</span> Scholarship Awards and Financial Data</h2>
     <ul>
       <li>Championship entry is <strong>free</strong>. No payment is required to compete</li>
       <li>Scholarship awards are paid via M-Pesa to a number provided by the winner at the time of winning</li>
@@ -278,17 +294,17 @@
       <li>Refund requests for in-app purchases should be submitted directly through Google Play</li>
     </ul>
 
-    <h2><span class="num">10.</span> Sponsorship Privacy</h2>
+    <h2><span class="num">11.</span> Sponsorship Privacy</h2>
     <ul>
       <li>Sponsors (donors) <strong>never</strong> see a learner's phone number, email, or full name — only the learner's first name</li>
       <li>Learners <strong>never</strong> see a sponsor's phone number or email — only the display name the sponsor chooses (or "Community Supporter" if anonymous)</li>
       <li>No direct contact between sponsors and learners is facilitated through the app</li>
     </ul>
 
-    <h2><span class="num">11.</span> Push Notifications</h2>
+    <h2><span class="num">12.</span> Push Notifications</h2>
     <p>We may send push notifications about championship openings and deadlines, scholarship award announcements, and new platform content availability. You can disable notifications at any time through your device's system settings.</p>
 
-    <h2><span class="num">12.</span> Cookies and Advertising</h2>
+    <h2><span class="num">13.</span> Cookies and Advertising</h2>
     <ul>
       <li>AI Champs does not use cookies</li>
       <li>The app does not track your activity across other apps or websites</li>
@@ -297,26 +313,26 @@
       <li>We do not use advertising IDs</li>
     </ul>
 
-    <h2><span class="num">13.</span> Data Retention</h2>
+    <h2><span class="num">14.</span> Data Retention</h2>
     <ul>
       <li><strong>Active accounts:</strong> data retained for as long as your account is active</li>
       <li><strong>Deleted accounts:</strong> personal data anonymised immediately. Payment records retained for 90 days, then permanently deleted. Financial records retained up to 7 years per Kenyan law</li>
       <li><strong>Inactive accounts:</strong> accounts inactive for more than 24 months may be flagged for deletion with prior notice</li>
     </ul>
 
-    <h2><span class="num">14.</span> Changes to This Policy</h2>
+    <h2><span class="num">15.</span> Changes to This Policy</h2>
     <p>We may update this Privacy Policy from time to time. We will notify users of significant changes via an in-app notification. Continued use of AI Champs after changes are posted constitutes your acceptance of the updated policy.</p>
 
-    <h2><span class="num">15.</span> Applicable Law</h2>
+    <h2><span class="num">16.</span> Applicable Law</h2>
     <p>This Privacy Policy is governed by the laws of the Republic of Kenya, including the <strong>Kenya Data Protection Act, 2019</strong>.</p>
 
-    <h2><span class="num">16.</span> Contact Us</h2>
+    <h2><span class="num">17.</span> Contact Us</h2>
     <p>For any privacy-related questions, data requests, or concerns:</p>
     <div class="contact-grid">
       <div class="contact-item"><div class="label">Company</div><div class="value" style="color:#FFFFFF;">Geoinfortrak International Limited</div></div>
       <div class="contact-item"><div class="label">Email</div><div class="value"><a href="mailto:geoinfortrak@gmail.com">geoinfortrak@gmail.com</a></div></div>
       <div class="contact-item"><div class="label">Phone</div><div class="value">+254 720 357 781</div></div>
-      <div class="contact-item"><div class="label">WhatsApp</div><div class="value"><a href="https://wa.me/254720357781">wa.me/254720357781</a></div></div>
+      <div class="contact-item"><div class="label">WhatsApp</div><div class="value"><a href="https://wa.me/254727621010">+254 727 621 010</a></div></div>
     </div>
 
   </div>
@@ -324,7 +340,7 @@
   <div class="footer">
     <p class="brand-small">{ AI CHAMPS }</p>
     <p>Geoinfortrak International Limited &nbsp;&middot;&nbsp; Nairobi, Kenya</p>
-    <p>Last updated: 26 March 2026</p>
+    <p>Last updated: 28 March 2026</p>
     <p style="margin-top:12px; color:#1A3A5C;">Learn It &middot; Master It &middot; Win It</p>
   </div>
 
